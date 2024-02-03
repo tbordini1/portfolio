@@ -1,0 +1,185 @@
+/* Reset CSS */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Configuração global para rolagem suave */
+html {
+   scroll-behavior: smooth;
+}
+
+/* Configurações do corpo da página */
+body {
+   background-image: url('./images/K0-unsplash.jpg');
+   background-color: #000;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+/* Configurações da interface */
+.interface {
+   max-width: 90%;
+   margin: 0 auto;
+}
+
+/* Estilos do Cabeçalho */
+header {
+   padding: 2.5% 4%;
+}
+
+/* Configurações da interface dentro do cabeçalho */
+header>.interface {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+/* Logotipo */
+header>.interface .logo {
+   display: flex;
+   margin-left: -70px;
+   font-size: 20px;
+   color: #f7f1f6;
+   cursor: pointer;
+}
+
+/* Estilos da Navegação */
+header nav ul li {
+   display: flex;
+   color: #f7f1f6;
+   cursor: pointer;
+}
+
+/* Estilos dos Links da Navegação */
+header a {
+   color: #4c4c4c;
+   font-size: 30px;
+   margin-right: 50px;
+   text-decoration: none;
+   display: inline-block;
+   transition: .2s;
+}
+
+/* Efeito de hover nos Links da Navegação */
+header a:hover {
+   color: #f1f0ed;
+   transform: scale(1.09);
+}
+
+/* Estilos da Lista de Navegação */
+header nav ul {
+   display: flex;
+   margin-left: -50px;
+   margin-top: 10px;
+   font-size: 15px;
+}
+
+/* Estilos dos itens da Lista de Navegação */
+header nav ul li {
+   display: inline-block;
+   padding: 0 2%;
+}
+
+/* Estilos do Botão de Contato */
+header .btn-contato button {
+   padding: 1% 4%;
+   font-size: 25px;
+   margin-right: -80px;
+   margin-top: 15px;
+   font-weight: 20px;
+   background-color: #f1f0ed;
+   border: 0;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+/* Efeito de hover no Botão de Contato */
+header .btn-contato button:hover {
+   box-shadow: 0px 0px 8px #f1f0ed;
+}
+
+/* Estilos da Seção Principal */
+.home-content {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   background-size: cover;
+   color: var(--color-white);
+   margin: 0 auto;
+   max-width: 90%;
+   height: 100vh;
+   min-height: 500px;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+/* Ícone de Animação */
+.home-icon img {
+   padding: 1%;
+   height: 200px;
+   border-radius: 100%;
+   margin-bottom: -20px;
+   position: absolute;
+   object-fit: cover;
+   border: 1px solid transparent;
+   right: 15vh;
+   bottom: 60%;
+   transition: all .50s ease;
+}
+
+/* Estilos do Texto de Apresentação */
+.text-container {
+   margin-left: 2%;
+}
+
+.text-1,
+.text-2,
+.text-3 {
+   font-size: 30px;
+   margin-top: 50px;
+   margin-bottom: 2em;
+   color: #f1f0ed;
+}
+
+.text-2 {
+   font-weight: 600;
+   margin-bottom: 1em;
+}
+
+.text-3 {
+   margin-top: 2em;
+}
+
+/* Cores diferentes para palavras que mudam */
+.typing-1,
+.typing-2,
+.typing-3,
+.typing-4 {
+   margin-top: 1em;
+   color: #e14cc8;
+}
+
+/* Ícones de Redes Sociais */
+.social-media {
+   margin-top: 3em;
+}
+
+.social-media a {
+   display: inline-block;
+   margin: 1em;
+   font-size: 2em;
+   color: var(--color-white);
+   cursor: pointer;
+   margin-right: 1.5em;
+   transition: all .50s ease;
+}
+
+/* Efeito de hover nos ícones de Redes Sociais */
+.social-media a:hover i {
+   transform: translateY(-3px);
+   transition: all 0.5s ease;
+   color: var(--color-purple-light);
+}

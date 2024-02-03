@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Links para fontes e ícones externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-nqKlcs7J7q9TyHF3ZxvL9D8Iv6o2eJK4tJo+dt7Ii6Uq/6lOZ3FviSUA4NFXTFAq" crossorigin="anonymous">
+
+    <!-- Link para o arquivo de estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts externos -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Título da Página -->
+    <title>thaisbordini</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="interface">
+            <!-- Logotipo -->
+            <div class="logo">
+                <h1>Portfolio</h1>
+            </div>
+            <!-- Ícone do Menu -->
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Navegação Desktop -->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projetos</a></li>
+                </ul>
+            </nav>
+            <!-- Botão de Contato -->
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="home-section" id="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <!-- Ícone de Animação -->
+                    <div class="home-icon">
+                        <img src="./images/eu-pixar3D.jpg" alt="animação imagem principal">
+                    </div>
+                    <!-- Texto de Apresentação -->
+                    <div class="text-container">
+                        <div class="text-1 common-color">Olá Mundo, me chamo </div>
+                        <div class="text-2 common-color">Thais Bordini</div>
+                        <div class="text-3">
+                            Eu sou <span class="typing typing-1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ícones de Redes Sociais -->
+                <div class="social-media">
+                    <a href="https://github.com/tbordini1" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/thais-bordini-8a405b257/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script adicional no final do corpo -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // Função para animar palavras dinâmicas
+        $(document).ready(function () {
+            var palavras = ['estudante de Front e Back-end', 'apaixonada por programação e desafios', 'gamer e entusiasta de tecnologia'];
+            var typingElement = $('.typing');
+
+            function animateWords(index) {
+                typingElement.fadeOut(500, function () {
+                    typingElement.text(palavras[index]);
+                    typingElement.fadeIn(500);
+                });
+            }
+
+            var currentIndex = 0;
+            animateWords(currentIndex);
+
+            // Intervalo para trocar palavras a cada 3 segundos
+            setInterval(function () {
+                currentIndex = (currentIndex + 1) % palavras.length;
+                animateWords(currentIndex);
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
